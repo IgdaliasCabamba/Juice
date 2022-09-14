@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "juice-core"
+version = "0.1.0"
+description = "the password generator"
+authors = ["Igdálias Cabamba <igdaliasmussulveiracabamba@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = []
+
+[tool.poetry.dependencies]
+python = "^3.8"
+rich = "^12.5.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

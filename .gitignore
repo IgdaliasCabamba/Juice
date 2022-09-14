@@ -1,0 +1,5 @@
+test
+pyenv
+__pycache__
+*.pyi
+*.pyo
