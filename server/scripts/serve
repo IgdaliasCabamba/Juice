@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+PYENVDIR=pyenv
+
+if [ -d "$PYENVDIR" ]; then
+    
+    if [[ -z "${VIRTUAL_ENV}" ]]; then
+        source $PYENVDIR/bin/activate
+    fi
+    uvicorn main:app --host "0.0.0.0" --port 8080 --log-level info --reload
+fi

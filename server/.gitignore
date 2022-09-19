@@ -1,2 +1,4 @@
 .deta
 pyenv
+core
+__pycache__
