@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import src.config as _set
 _set.up()
 
-from routes import api_app
+from src.routes import api_app
 
 app = FastAPI()
 
