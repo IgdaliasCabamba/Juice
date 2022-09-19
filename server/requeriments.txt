@@ -1,0 +1,8 @@
+anyio
+deta
+fastapi
+idna
+pydantic
+sniffio
+starlette
+typing_extensions
