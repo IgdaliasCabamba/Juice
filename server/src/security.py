@@ -30,6 +30,12 @@ class Security:
 async def require_user(user: Union[str, None] = Cookie(default=None)):
     if user is None:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED)
+    
     decrypted_user_key = Security.decrypt_cookie(user)
-    return {"user_auth": Users.get(decrypted_user_key)}
+    user_in_db = Users.get(decrypted_user_key)
+    
+    if user_in_db is None:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED)
+
+    return {"user_auth": user_in_db}
 
